@@ -69,6 +69,6 @@ def edit(info_id):
         cursor.close()
         return redirect(url_for('index'))
     return render_template('edit.html', info=info)
-
+#comment
 if __name__ == '__main__':
     app.run(debug=True)
