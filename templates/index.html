@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>INFORMATION</h1>
+    <a href="/add" style="color: blue;">Add Information</a> <br>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Info ID</th>
+                <th>Full Name</th>
+                <th>Contact</th>
+                <th>Email Address</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for info in infos %}
+            <tr>
+                <td>{{ info.info_id }}</td>
+                <td>{{ info.fname }}</td>
+                <td>{{ info.contact }}</td>
+                <td>{{ info.email_add }}</td>
+                <td><a href="/edit/{{ info.info_id }}" style="color: rgb(174, 73, 15);">edit</a> | <a href="/delete/{{ info.info_id }}" style="color: red;">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</body>
+</html>
